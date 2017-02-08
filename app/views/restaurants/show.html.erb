@@ -1,0 +1,53 @@
+<div class="container">
+
+
+    <ul class = "list-group">
+      <li class = "list-group-item active text-center">
+         <h3> <%= @restaurant.name %> </h3>
+      </li>
+    </ul>
+
+      <p>
+        <strong>address:</strong> <%= @restaurant.address %>
+      </p>
+      <p>
+        <strong>category:</strong> <%= @restaurant.category %>
+      </p>
+
+
+    <table class ="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            <h2>Rating</h2>
+          </th>
+
+          <th>
+            <h2>Review</h2>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <%  @restaurant.reviews.each do |review| %>
+        <tr>
+          <td>
+            <p> <%= review.rating %> </p>
+          </td>
+          <td>
+            <p> <%= review.content %> </p>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+
+    </table>
+    <ul class = "list-inline">
+      <li> <%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-danger" %>
+      </li>
+      <li>
+      <%= link_to "Back to all restaurants", restaurants_path %>
+      </li>
+    </ul>
+</div>
+
