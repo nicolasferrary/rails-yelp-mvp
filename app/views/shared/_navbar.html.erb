@@ -1,19 +1,19 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <img src="images/lewagon.png" />
+  <a href="/restaurants" class="navbar-wagon-brand">
+    <%= image_tag "logo.svg" %>
   </a>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Search form -->
-    <form action="" class="navbar-wagon-search">
+   <!--  <form action="" class="navbar-wagon-search">
       <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
+      <button type="submit" class="navbar-wagon-search-btn"
         <i class="fa fa-search"></i>
       </button>
-    </form>
+    </form> -->
 
     <!-- Text link -->
     <a href="" class="navbar-wagon-item navbar-wagon-link">Contact</a>
@@ -42,7 +42,7 @@
     </div>
 
     <!-- Button (call-to-action) -->
-    <a href="" class="navbar-wagon-item navbar-wagon-button btn">Post stuff</a>
+    <%= link_to "Add a restaurant", new_restaurant_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
